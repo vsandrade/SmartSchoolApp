@@ -1,0 +1,77 @@
+<form class="normal-form" #f="ngForm" (submit)="onSubmit(f)">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <mat-form-field>
+          <input
+          type="text"
+          matInput
+          placeholder="Registro"
+          ngModel
+          name="registro"
+          required
+          #registro="ngModel"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+          type="text"
+          matInput
+          placeholder="Nome"
+          ngModel
+          name="nome"
+          #nome="ngModel"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+          type="text"
+          matInput
+          placeholder="Sobrenome"
+          ngModel
+          name="sobrenome"
+          #sobrenome="ngModel"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+          type="text"
+          matInput
+          placeholder="Telefone"
+          ngModel
+          name="telefone"
+          #telefone="ngModel"
+          >
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="controles-container">
+        <div class="add-bottom-padding">
+          <label id="example-radio-group-label">Professor Ativo:</label>
+          <br>
+          <mat-radio-group ngModel name="ativo" #ativo="ngModel">
+            <mat-radio-button checked="true" value="1">Sim</mat-radio-button>
+            <mat-radio-button value="0">Não</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <mat-form-field>
+          <input
+          [matDatepicker]="picker"
+          matInput
+          placeholder="Data Inicio"
+          ngModel
+          name="dataIni"
+          required
+          >
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Submit</button>
+          <button mat-raised-button color="warn">Clear</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

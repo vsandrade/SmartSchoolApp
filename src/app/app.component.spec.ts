@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ProCycle'`, () => {
+  it(`should have as title 'SmartSchoolApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ProCycle');
+    expect(app.title).toEqual('SmartSchoolApp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ProCycle app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('SmartSchoolApp app is running!');
   });
 });
