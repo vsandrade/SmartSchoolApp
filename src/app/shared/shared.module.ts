@@ -16,10 +16,6 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
-  declarations: [
-    HeaderNavComponent,
-    SideNavComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,9 +42,6 @@ import { SideNavComponent } from './side-nav/side-nav.component';
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class SharedModule { }

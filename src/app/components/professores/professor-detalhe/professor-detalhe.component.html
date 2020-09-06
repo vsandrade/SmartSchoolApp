@@ -1,5 +1,5 @@
 <mat-card>
-  <form class="normal-form" #f="ngForm" (submit)="onSubmit(f)">
+  <form class="normal-form" [formGroup]="professorForm">
     <mat-card-header style="border-bottom: 1px solid #e5e5e5 ;">
       <mat-card-title>Registar Professor</mat-card-title>
     </mat-card-header>
@@ -9,15 +9,15 @@
           <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
             <mat-form-field appearance="fill">
               <mat-label>Registro</mat-label>
-              <input type="text" matInput ngModel name="registro" required #registro="ngModel">
+              <input type="text" matInput formControlName="Registro">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>Nome</mat-label>
-              <input type="text" matInput ngModel name="nome" #nome="ngModel">
+              <input type="text" matInput formControlName="Nome">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>Sobrenome</mat-label>
-              <input type="text" matInput ngModel name="sobrenome" #sobrenome="ngModel">
+              <input type="text" matInput formControlName="Sobrenome">
             </mat-form-field>
           </div>
         </div>
@@ -25,17 +25,17 @@
           <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
             <mat-form-field appearance="fill">
               <mat-label>Telefone</mat-label>
-              <input type="text" matInput ngModel name="telefone" #telefone="ngModel">
+              <input type="text" matInput formControlName="Telefone">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>Data Início</mat-label>
-              <input [matDatepicker]="picker" matInput ngModel name="dataIni" required >
+              <input [matDatepicker]="picker" matInput formControlName="DataIni">
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>Ativo:</mat-label>
-              <mat-select ngModel name="ativo" #ativo="ngModel">
+              <mat-select formControlName="Ativo">
                 <mat-option value="1">Sim</mat-option>
                 <mat-option value="0">Não</mat-option>
               </mat-select>
@@ -43,14 +43,17 @@
           </div>
         </div>
       </div>
-
-
     </mat-card-content>
-    <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: flex-end;">
-      <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Submit</button>
-      <button mat-raised-button color="warn">Clear</button>
-    </mat-card-actions>
   </form>
+  <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: space-between; margin: 0px 10px;">
+    <div>
+      <button mat-raised-button color="basic">Voltar</button>
+    </div>
+    <div>
+      <button mat-raised-button (click)="registrarProfessor()" color="primary" type="submit" [disabled]="professorForm.invalid">Salvar</button>
+      <button mat-raised-button (click)="limparProfessor()" color="warn">Limpar</button>
+    </div>
+  </mat-card-actions>
 </mat-card>
 
 

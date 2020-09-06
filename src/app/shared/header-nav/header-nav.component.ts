@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/Auth.service';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'app-header-nav',
   templateUrl: './header-nav.component.html',
   styleUrls: ['./header-nav.component.scss']
 })

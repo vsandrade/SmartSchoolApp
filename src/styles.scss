@@ -40,10 +40,16 @@ mat-radio-group mat-radio-button {
 }
 
 .mat-toolbar {
-  background: #4b4b4b;
-  color: white
+  background: #696969;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .mat-card-content {
   padding-top: 15px;
+}
+
+.mat-form-field {
+  line-height: 1.25;
 }

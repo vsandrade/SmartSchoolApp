@@ -18,6 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -40,7 +42,10 @@ import { MatTableModule } from '@angular/material/table';
     MatDialogModule,
     MatGridListModule,
     MatRadioModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonToggleModule,
+    MatSnackBarModule
+
   ],
   exports: [
     MatSliderModule,
@@ -61,7 +66,9 @@ import { MatTableModule } from '@angular/material/table';
     MatDialogModule,
     MatGridListModule,
     MatRadioModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
 })
