@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 import { SharedService } from './shared.service';
 
 @Injectable()
-export class AlunosService extends SharedService {
+export class AlunoService extends SharedService {
 
   baseURL = `${environment.mainUrlAPI}aluno`;
 

@@ -1,7 +1,11 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html, body { height: 100%; }
+html, body { height: 100%; background-color: #efefef; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-card-header-text {
+  margin: 0px !important;
+}
 
 div.container {
   margin: 10px 40px;
@@ -16,8 +20,7 @@ form.normal-form {
 }
 
 .controles-container {
-  width: 100%;
-  padding: 5%;
+  padding: 15px;
 }
 
 .controles-container > * {
@@ -34,4 +37,9 @@ mat-radio-group mat-radio-button {
 
 .button-row button {
   margin-right: 10px;
+}
+
+.mat-toolbar {
+  background: #4b4b4b;
+  color: white
 }

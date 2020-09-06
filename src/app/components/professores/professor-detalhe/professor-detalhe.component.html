@@ -1,77 +1,91 @@
-<form class="normal-form" #f="ngForm" (submit)="onSubmit(f)">
-  <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-      <div class="controles-container">
-        <mat-form-field>
-          <input
-          type="text"
-          matInput
-          placeholder="Registro"
-          ngModel
-          name="registro"
-          required
-          #registro="ngModel"
-          >
-        </mat-form-field>
-        <mat-form-field>
-          <input
-          type="text"
-          matInput
-          placeholder="Nome"
-          ngModel
-          name="nome"
-          #nome="ngModel"
-          >
-        </mat-form-field>
-        <mat-form-field>
-          <input
-          type="text"
-          matInput
-          placeholder="Sobrenome"
-          ngModel
-          name="sobrenome"
-          #sobrenome="ngModel"
-          >
-        </mat-form-field>
-        <mat-form-field>
-          <input
-          type="text"
-          matInput
-          placeholder="Telefone"
-          ngModel
-          name="telefone"
-          #telefone="ngModel"
-          >
-        </mat-form-field>
+<mat-card>
+  <form class="normal-form" #f="ngForm" (submit)="onSubmit(f)">
+    <mat-card-header style="border-bottom: 1px solid #e5e5e5 ;">
+      <mat-card-title>Registar Professor</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="controles-container">
+      <mat-form-field>
+        <mat-label>Registro</mat-label>
+        <input
+        type="text"
+        matInput
+        ngModel
+        name="registro"
+        required
+        #registro="ngModel"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input
+        type="text"
+        matInput
+        ngModel
+        name="nome"
+        #nome="ngModel"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Sobrenome</mat-label>
+        <input
+        type="text"
+        matInput
+        ngModel
+        name="sobrenome"
+        #sobrenome="ngModel"
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Telefone</mat-label>
+        <input
+        type="text"
+        matInput
+        ngModel
+        name="telefone"
+        #telefone="ngModel"
+        >
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: flex-end;">
+      <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Submit</button>
+      <button mat-raised-button color="warn">Clear</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+
+
+<!-- <div fxLayout="row" fxLayout.lt-md="column"  fxLayoutGap="10px">
+  <div fxLayout.gt-md="row" fxLayout.lt-sm="column"  fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50">
+    <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
+
+    </div>
+  </div>
+  <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="50">
+    <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
+      <div class="add-bottom-padding">
+        <label id="example-radio-group-label">Professor Ativo:</label>
+        <br>
+        <mat-radio-group ngModel name="ativo" #ativo="ngModel">
+          <mat-radio-button checked="true" value="1">Sim</mat-radio-button>
+          <mat-radio-button value="0">Não</mat-radio-button>
+        </mat-radio-group>
       </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="controles-container">
-        <div class="add-bottom-padding">
-          <label id="example-radio-group-label">Professor Ativo:</label>
-          <br>
-          <mat-radio-group ngModel name="ativo" #ativo="ngModel">
-            <mat-radio-button checked="true" value="1">Sim</mat-radio-button>
-            <mat-radio-button value="0">Não</mat-radio-button>
-          </mat-radio-group>
-        </div>
-        <mat-form-field>
-          <input
-          [matDatepicker]="picker"
-          matInput
-          placeholder="Data Inicio"
-          ngModel
-          name="dataIni"
-          required
-          >
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <div class="button-row">
-          <button mat-raised-button color="primary" type="submit" [disabled]="f.invalid">Submit</button>
-          <button mat-raised-button color="warn">Clear</button>
-        </div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</form>
+      <mat-form-field>
+        <input
+        [matDatepicker]="picker"
+        matInput
+        ngModel
+        name="dataIni"
+        required
+        >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div style="margin: 0px 5%" fxLayout="column" fxLayoutGap="10px">
+  <div class="button-row">
+
+  </div>
+</div> -->
