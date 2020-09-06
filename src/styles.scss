@@ -20,7 +20,7 @@ form.normal-form {
 }
 
 .controles-container {
-  padding: 15px;
+  padding: 0px;
 }
 
 .controles-container > * {
@@ -42,4 +42,8 @@ mat-radio-group mat-radio-button {
 .mat-toolbar {
   background: #4b4b4b;
   color: white
+}
+
+.mat-card-content {
+  padding-top: 15px;
 }
