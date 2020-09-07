@@ -1,0 +1,16 @@
+<mat-toolbar class="Title-toolbar" color="link">
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Listar</button>
+    <button mat-menu-item>Novo</button>
+  </mat-menu>
+  <span class="fill-remaining-space"></span>
+  <span>Professores</span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button>
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    voltar
+  </button>
+</mat-toolbar>
