@@ -3,13 +3,13 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Listar</button>
-    <button mat-menu-item>Novo</button>
+    <button mat-menu-item (click)="listar()">Listar</button>
+    <button mat-menu-item (click)="novo()">Novo</button>
   </mat-menu>
   <span class="fill-remaining-space"></span>
-  <span>Professores</span>
+  <span>{{ titleCapitalized() }}</span>
   <span class="fill-remaining-space"></span>
-  <button mat-button>
+  <button mat-button (click)="voltar()">
     <mat-icon>keyboard_arrow_left</mat-icon>
     voltar
   </button>

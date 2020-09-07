@@ -44,16 +44,16 @@
         </div>
       </div>
     </mat-card-content>
+    <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: space-between; margin: 0px">
+      <div>
+        <button mat-raised-button color="basic">Voltar</button>
+      </div>
+      <div>
+        <button mat-raised-button (click)="registrarProfessor()" color="primary" type="submit" [disabled]="professorForm.invalid">Salvar</button>
+        <button mat-raised-button (click)="limparProfessor()" color="warn">Limpar</button>
+      </div>
+    </mat-card-actions>
   </form>
-  <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: space-between; margin: 0px 10px;">
-    <div>
-      <button mat-raised-button color="basic">Voltar</button>
-    </div>
-    <div>
-      <button mat-raised-button (click)="registrarProfessor()" color="primary" type="submit" [disabled]="professorForm.invalid">Salvar</button>
-      <button mat-raised-button (click)="limparProfessor()" color="warn">Limpar</button>
-    </div>
-  </mat-card-actions>
 </mat-card>
 
 

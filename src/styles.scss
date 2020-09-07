@@ -1,4 +1,4 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body { height: 100%; background-color: #efefef; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -13,6 +13,10 @@ div.container {
 
 .fill-remaining-space {
   flex: 1 1 auto;
+}
+
+.mat-card-header {
+  border-bottom: 1px solid #e5e5e5 ;
 }
 
 form.normal-form {

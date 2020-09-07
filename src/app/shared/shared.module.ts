@@ -12,7 +12,12 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
+import { HeaderTitleComponent } from 'src/app/shared/components/header-title/header-title.component';
+
 @NgModule({
+  declarations: [
+    HeaderTitleComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +40,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ReactiveFormsModule,
     NgxSpinnerModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HeaderTitleComponent
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },

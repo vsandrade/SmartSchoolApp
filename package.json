@@ -25,8 +25,7 @@
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3",
-    "ngx-spinner": "^8.0.1",
-    "ngx-toastr": "^10.0.4"
+    "ngx-spinner": "^8.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",

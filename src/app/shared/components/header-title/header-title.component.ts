@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Util } from '../../util/util';
 @Component({
   selector: 'app-header-title',
   templateUrl: './header-title.component.html',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderTitleComponent implements OnInit {
 
-  constructor() { }
+  @Input() title: string;
+  public util: Util;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  listar(): void {
+    this.router.navigate([`/${this.title}/lista`]);
+  }
+
+  novo(): void {
+    this.router.navigate([`/${this.title}/detalhe`]);
+  }
+
+  voltar(): void {
+    window.history.back();
+  }
+
+  titleCapitalized(): string {
+    return Util.Capitalized(this.title);
   }
 
 }
