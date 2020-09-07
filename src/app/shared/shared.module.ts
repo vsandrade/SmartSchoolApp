@@ -12,9 +12,6 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
-import { HeaderNavComponent } from './header-nav/header-nav.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
-
 @NgModule({
   imports: [
     BrowserModule,

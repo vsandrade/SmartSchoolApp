@@ -1,13 +1,13 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/services/Auth.service';
 
 @Component({
-  selector: 'app-header-nav',
-  templateUrl: './header-nav.component.html',
-  styleUrls: ['./header-nav.component.scss']
+  selector: 'app-top-nav',
+  templateUrl: './top-nav.component.html',
+  styleUrls: ['./top-nav.component.scss']
 })
-export class HeaderNavComponent implements OnInit {
+export class TopNavComponent implements OnInit, OnDestroy {
 
   @Output() public sideNavToggle = new EventEmitter<void>();
   isAuth: boolean;

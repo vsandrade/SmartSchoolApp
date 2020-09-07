@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HeaderNavComponent } from './header-nav.component';
+import { TopNavComponent } from './top-nav.component';
 
-describe('HeaderNavComponent', () => {
-  let component: HeaderNavComponent;
-  let fixture: ComponentFixture<HeaderNavComponent>;
+describe('TopNavComponent', () => {
+  let component: TopNavComponent;
+  let fixture: ComponentFixture<TopNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNavComponent ]
+      declarations: [ TopNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderNavComponent);
+    fixture = TestBed.createComponent(TopNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
