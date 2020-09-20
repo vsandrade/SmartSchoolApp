@@ -1,5 +1,5 @@
 <mat-card>
-  <form class="normal-form" [formGroup]="DisciplinaForm">
+  <form class="normal-form">
   <mat-card-header>
     <mat-card-title>Detalhe Disciplina</mat-card-title>
   </mat-card-header>
@@ -10,7 +10,7 @@
       <button mat-raised-button color="basic">Voltar</button>
     </div>
     <div>
-      <button mat-raised-button (click)="registrarDisciplina()" color="primary" type="submit" [disabled]="DisciplinaForm.invalid">Salvar</button>
+      <button mat-raised-button (click)="registrarDisciplina()" color="primary" type="submit">Salvar</button>
       <button mat-raised-button (click)="limparDisciplina()" color="warn">Limpar</button>
     </div>
   </mat-card-actions>

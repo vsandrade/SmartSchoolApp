@@ -1,16 +1,36 @@
 <mat-toolbar class="Title-toolbar" color="link">
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="listar()">Listar</button>
-    <button mat-menu-item (click)="novo()">Novo</button>
-  </mat-menu>
+  <div fxHide fxShow.xs>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="listar()">
+        <mat-icon>list</mat-icon>
+        Listar
+      </button>
+      <button mat-menu-item (click)="novo()">
+        <mat-icon>description</mat-icon>
+        Novo
+      </button>
+    </mat-menu>
+  </div>
+  <div fxHide.xs>
+    <button mat-button (click)="listar()">
+      <mat-icon>list</mat-icon>
+      Listar
+    </button>
+    <button mat-button (click)="novo()">
+      <mat-icon>description</mat-icon>
+      Novo
+    </button>
+  </div>
   <span class="fill-remaining-space"></span>
   <span>{{ titleCapitalized() }}</span>
   <span class="fill-remaining-space"></span>
   <button mat-button (click)="voltar()">
-    <mat-icon>keyboard_arrow_left</mat-icon>
-    voltar
+    <mat-icon>arrow_back</mat-icon>
+    <span fxHide.xs>
+      voltar
+    </span>
   </button>
 </mat-toolbar>

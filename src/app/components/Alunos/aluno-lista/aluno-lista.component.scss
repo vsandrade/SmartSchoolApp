@@ -1,0 +1,76 @@
+.listagem {
+  width: 100%;
+}
+
+.mat-card-content {
+  padding: 0px 10px 10px 10px;
+
+  .mat-form-field {
+    font-size: 14px;
+    margin: 10px 30px 0px 5px;
+    width: 98%;
+  }
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+  cursor: pointer;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.element-diagram {
+  height: 100px;
+  border: 2px solid black;
+  font-weight: lighter;
+  margin: 8px 0;
+  border-radius: 5px;
+
+  &-imgProfile {
+    height: 100px;
+  }
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.element-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 8px;
+
+  &-detail {
+    padding: 16px 16px 0px 16px;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid black;
+    padding: 5px;
+  }
+
+  .mat-button {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.element-description-attribution {
+  opacity: 0.5;
+}

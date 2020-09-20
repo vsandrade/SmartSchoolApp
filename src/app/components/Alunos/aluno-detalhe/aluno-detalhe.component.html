@@ -1,16 +1,55 @@
 <mat-card>
-  <form class="normal-form" [formGroup]="AlunoForm">
+  <form class="normal-form" [formGroup]="alunoForm">
   <mat-card-header>
     <mat-card-title>Detalhe Aluno</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content class="controles-container">
+    <div fxLayout="row" fxLayout.lt-md="column"  fxLayoutGap.gt-sm="10px">
+      <div fxLayout.gt-md="row" fxLayout.lt-sm="column"  fxLayoutGap.gt-sm="10px" fxFlex="100" fxFlex.gt-md="50">
+        <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
+          <mat-form-field appearance="fill">
+            <mat-label>Matricula</mat-label>
+            <input type="text" matInput formControlName="Matricula">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input type="text" matInput formControlName="Nome">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Sobrenome</mat-label>
+            <input type="text" matInput formControlName="Sobrenome">
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout.gt-md="row" fxLayout.lt-sm="column" fxFlex="100" fxFlex.gt-md="50">
+        <div class="controles-container" fxFlex.lt-md="100" fxFlex.lt-sm="100" >
+          <mat-form-field appearance="fill">
+            <mat-label>Telefone</mat-label>
+            <input type="text" matInput formControlName="Telefone">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Data Nascimento</mat-label>
+            <input [matDatepicker]="picker" matInput formControlName="DataNasc">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Ativo:</mat-label>
+            <mat-select formControlName="Ativo">
+              <mat-option value="1">Sim</mat-option>
+              <mat-option value="0">Não</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
   </mat-card-content>
   <mat-card-actions style="border-top:1px solid #e5e5e5; display: flex; justify-content: space-between; margin: 0px;">
     <div>
       <button mat-raised-button color="basic">Voltar</button>
     </div>
     <div>
-      <button mat-raised-button (click)="registrarAluno()" color="primary" type="submit" [disabled]="AlunoForm.invalid">Salvar</button>
+      <button mat-raised-button (click)="registrarAluno()" color="primary" type="submit" [disabled]="alunoForm.invalid">Salvar</button>
       <button mat-raised-button (click)="limparAluno()" color="warn">Limpar</button>
     </div>
   </mat-card-actions>

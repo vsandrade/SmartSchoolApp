@@ -1,7 +1,7 @@
 import { Disciplina } from './Disciplina';
 
 export class Aluno {
-  public Id: number;
+  public Id?: number;
   public Matricula: number;
   public Nome: string;
   public Sobrenome: string;

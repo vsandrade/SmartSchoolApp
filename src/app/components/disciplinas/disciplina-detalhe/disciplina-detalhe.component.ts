@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class DisciplinaDetalheComponent implements OnInit {
 
-  public DisciplinaForm: FormGroup;
+  public disciplinaForm: FormGroup;
 
   constructor(public disciplinaService: DisciplinaService,
               private snackBar: MatSnackBar,

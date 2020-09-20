@@ -8,13 +8,10 @@
     <a routerLink="/">SmartSchool App</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-      <li>
-        <a routerLink="professores/lista">Professores</a>
-      </li>
-      <li>
-        <a routerLink="alunos/lista">Alunos</a>
-      </li>
-    </ul>
+    <div fxLayout fxLayoutGap="10px" class="navigation-items">
+      <a mat-button routerLink="professores/lista">Professores</a>
+      <a mat-button routerLink="alunos/lista">Alunos</a>
+      <a mat-button routerLink="disciplinas/lista">Disciplinas</a>
+    </div>
   </div>
 </mat-toolbar>
