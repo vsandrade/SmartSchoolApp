@@ -1,5 +1,5 @@
 <mat-toolbar class="Title-toolbar" color="link">
-  <div fxHide fxShow.xs>
+  <div fxHide fxShow.xs *ngIf="commands">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
@@ -14,7 +14,7 @@
       </button>
     </mat-menu>
   </div>
-  <div fxHide.xs>
+  <div fxHide.xs *ngIf="commands">
     <button mat-button (click)="listar()">
       <mat-icon>list</mat-icon>
       Listar
@@ -27,9 +27,12 @@
   <span class="fill-remaining-space"></span>
   <span>{{ titleCapitalized() }}</span>
   <span class="fill-remaining-space"></span>
-  <button mat-button (click)="voltar()">
+  <button mat-icon-button (click)="voltar()" *ngIf="commands" fxHide fxShow.xs>
     <mat-icon>arrow_back</mat-icon>
-    <span fxHide.xs>
+  </button>
+  <button mat-button (click)="voltar()" *ngIf="commands" fxHide.xs>
+    <mat-icon>arrow_back</mat-icon>
+    <span>
       voltar
     </span>
   </button>

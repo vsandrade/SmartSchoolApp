@@ -1,5 +1,55 @@
 <div class="container">
+  <app-header-title [title]="'dashboard'" [commands]="false"></app-header-title>
+  <br>
+
+  <br>
   <mat-card>
-    dashboard works!
+    <mat-card-header>
+      <mat-card-title>Novidades de Alunos</mat-card-title>
+    </mat-card-header>
+    <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap.gt-sm="10px" fxLayoutAlign="flex-start">
+      <mat-card class="card" fxFlex="0 1 33.3%">
+        <mat-card-header class="card-header">
+          <mat-card-title>Alunos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h1 class="card-number">350</h1>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card class="card" fxFlex="0 1 calc(33.3% - 10px)">
+        <mat-card-header class="card-header">
+          <mat-card-title>Professores</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h1 class="card-number">10</h1>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card class="card" fxFlex="0 1 calc(33.3% - 10px)">
+        <mat-card-header class="card-header">
+          <mat-card-title>Disciplinas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h1 class="card-number">20</h1>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-card>
+  <br>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Novidades de Professores</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+  <br>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Novidades de Disciplinas</mat-card-title>
+    </mat-card-header>
   </mat-card>
 </div>

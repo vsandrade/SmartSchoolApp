@@ -6,9 +6,10 @@ export class Aluno {
   public Nome: string;
   public Sobrenome: string;
   public Telefone: string;
-  public DataNasc: Date;
-  public DataIni: Date;
-  public DataFim: Date;
+  public DataNasc?: Date;
+  public DataIni?: Date;
+  public DataFim?: Date;
   public Ativo: boolean;
-  public Disciplinas: Disciplina[];
+  public Descricao: string;
+  public Disciplinas?: Disciplina[];
 }

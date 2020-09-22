@@ -1,0 +1,23 @@
+.card {
+  text-align: center;
+  margin: 10px 0px;
+  border-bottom: 6px solid #ffe055;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &-number {
+    font-size: 50px;
+    padding: 20px 0px;
+  }
+
+  &-header {
+    justify-content: center;
+  }
+}
+
+
+.header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

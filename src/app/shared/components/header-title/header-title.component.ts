@@ -9,6 +9,7 @@ import { Util } from '../../util/util';
 export class HeaderTitleComponent implements OnInit {
 
   @Input() title: string;
+  @Input() commands = true;
   public util: Util;
 
   constructor(private router: Router) { }
